@@ -6,7 +6,8 @@ class StorePicker extends React.Component {
 
   goToStore = event => {
     event.preventDefault();
-    console.log(this);
+    const storeName = this.myInput.current.value;
+    this.props.history.push(`/store/${storeName}`);
   };
 
   render() {
@@ -20,7 +21,7 @@ class StorePicker extends React.Component {
           placeholder="Store Name"
           defaultValue={getFunName()}
         />
-        <button type="submit">Visit Store -></button>
+        <button type="submit">Visit Store →</button>
       </form>
     );
   }
