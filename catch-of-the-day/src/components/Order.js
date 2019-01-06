@@ -16,6 +16,7 @@ class Order extends React.Component {
         </li>
       );
     }
+
     return (
       <li key={key}>
         {count} lbs {fish.name}
